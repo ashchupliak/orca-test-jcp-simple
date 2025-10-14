@@ -1,0 +1,40 @@
+{
+	"name": "JCP Simple - Kotlin/JVM Microservice",
+	"image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
+
+	"features": {
+		"ghcr.io/devcontainers/features/gradle:1": {
+			"version": "8.5"
+		},
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"fwcd.kotlin",
+				"vscjava.vscode-gradle"
+			]
+		}
+	},
+
+	"remoteEnv": {
+		"GRADLE_USER_HOME": "/workspace/.gradle"
+	},
+
+	"postCreateCommand": "gradle --version && ./gradlew dependencies",
+
+	"postStartCommand": "echo '✅ JCP Simple ready for development'",
+
+	"forwardPorts": [8080],
+
+	"portsAttributes": {
+		"8080": {
+			"label": "Application",
+			"onAutoForward": "notify"
+		}
+	},
+
+	"remoteUser": "vscode"
+}
