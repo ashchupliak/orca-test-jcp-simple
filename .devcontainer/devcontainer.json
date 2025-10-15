@@ -3,8 +3,10 @@
 	"image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
 
 	"features": {
-		"ghcr.io/devcontainers/features/gradle:1": {
-			"version": "8.5"
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "17",
+			"installGradle": true,
+			"gradleVersion": "8.5"
 		},
 		"ghcr.io/devcontainers/features/git:1": {},
 		"ghcr.io/devcontainers/features/github-cli:1": {}
