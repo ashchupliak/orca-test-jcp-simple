@@ -25,7 +25,7 @@
 		"GRADLE_USER_HOME": "/workspace/.gradle"
 	},
 
-	"postCreateCommand": "./gradlew --version",
+	"postCreateCommand": "bash -c 'chmod +x gradlew && ./gradlew --version'",
 
 	"postStartCommand": "echo '✅ JCP Simple ready for development'",
 
