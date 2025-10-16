@@ -25,7 +25,7 @@
 		"GRADLE_USER_HOME": "/workspace/.gradle"
 	},
 
-	"postCreateCommand": "bash -c 'chmod +x gradlew && ./gradlew --version'",
+	"postCreateCommand": "echo 'Sleeping for 3 minutes to keep container alive...' && sleep 180 && echo 'Container ready'",
 
 	"postStartCommand": "echo '✅ JCP Simple ready for development'",
 
