@@ -22,7 +22,7 @@
 	},
 
 	"remoteEnv": {
-		"GRADLE_USER_HOME": "/workspace/.gradle"
+		"GRADLE_USER_HOME": "/workspaces/.gradle"
 	},
 
 	"postCreateCommand": "./gradlew --version",
