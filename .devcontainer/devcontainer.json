@@ -21,10 +21,6 @@
 		}
 	},
 
-	"remoteEnv": {
-		"GRADLE_USER_HOME": "/workspaces/.gradle"
-	},
-
 	"postCreateCommand": "./gradlew --version",
 
 	"postStartCommand": "echo '✅ JCP Simple ready for development'",
