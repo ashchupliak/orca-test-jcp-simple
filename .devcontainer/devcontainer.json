@@ -35,7 +35,5 @@
 			"label": "Application",
 			"onAutoForward": "notify"
 		}
-	},
-
-	"remoteUser": "vscode"
+	}
 }
