@@ -1,6 +1,6 @@
 {
 	"name": "JCP Simple - Kotlin/JVM Microservice",
-	"image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
+	"dockerFile": "./jcp/Dockerfile",
 
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
@@ -8,8 +8,11 @@
 			"installGradle": true,
 			"gradleVersion": "8.5"
 		},
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
 		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {}
+		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
 	},
 
 	"customizations": {
@@ -32,5 +35,7 @@
 			"label": "Application",
 			"onAutoForward": "notify"
 		}
-	}
+	},
+
+	"remoteUser": "vscode"
 }
