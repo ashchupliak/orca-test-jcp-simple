@@ -1,39 +1,15 @@
 {
-	"name": "JCP Simple - Kotlin/JVM Microservice",
-	"dockerFile": "./jcp/Dockerfile",
+  "name": "Java",
+  "dockerFile": "./Dockerfile",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21-oracle",
+      "jdkDistro": "oracle"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
 
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "17",
-			"installGradle": true,
-			"gradleVersion": "8.5"
-		},
-		"ghcr.io/devcontainers/features/azure-cli:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/github-cli:1": {},
-		"ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
-	},
-
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"fwcd.kotlin",
-				"vscjava.vscode-gradle"
-			]
-		}
-	},
-
-	"postCreateCommand": "./gradlew --version",
-
-	"postStartCommand": "echo '✅ JCP Simple ready for development'",
-
-	"forwardPorts": [8080],
-
-	"portsAttributes": {
-		"8080": {
-			"label": "Application",
-			"onAutoForward": "notify"
-		}
-	}
+  "forwardPorts": [8080],
+  "runArgs": ["--publish", "8080:8080"]
 }
