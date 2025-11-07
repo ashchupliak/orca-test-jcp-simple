@@ -11,5 +11,7 @@
   },
 
   "forwardPorts": [8080],
-  "runArgs": ["--publish", "8080:8080"]
+  "runArgs": ["--publish", "8080:8080"],
+
+  "postStartCommand": "echo '=== Building and testing JCP Simple ===' && ./gradlew clean build test && echo '=== BUILD SUCCESS ===' && echo '=== Starting service ===' && ./gradlew run"
 }
