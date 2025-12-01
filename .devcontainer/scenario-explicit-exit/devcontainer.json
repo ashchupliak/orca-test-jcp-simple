@@ -1,0 +1,7 @@
+{
+  "name": "Status Test: Explicit Exit 0",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--name", "orca-test-explicit-exit"],
+  "postCreateCommand": "echo 'Container created'",
+  "postStartCommand": "exit 0"
+}

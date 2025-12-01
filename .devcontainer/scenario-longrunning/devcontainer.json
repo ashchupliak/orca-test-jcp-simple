@@ -1,0 +1,7 @@
+{
+  "name": "Status Test: Long Running (sleep infinity)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--name", "orca-test-longrunning"],
+  "postCreateCommand": "echo 'Container created'",
+  "postStartCommand": "echo 'Starting long-running process' && sleep infinity"
+}

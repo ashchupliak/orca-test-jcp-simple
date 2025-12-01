@@ -1,0 +1,7 @@
+{
+  "name": "Status Test: Failure (exit 1)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--name", "orca-test-failure"],
+  "postCreateCommand": "echo 'Container created'",
+  "postStartCommand": "echo 'FAILURE: Exiting with code 1' && exit 1"
+}

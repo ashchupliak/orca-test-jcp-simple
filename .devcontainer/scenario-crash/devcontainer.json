@@ -1,0 +1,7 @@
+{
+  "name": "Status Test: Runtime Crash (kill after 5s)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--name", "orca-test-crash"],
+  "postCreateCommand": "echo 'Container created'",
+  "postStartCommand": "echo 'Running for 5 seconds then crashing' && sleep 5 && echo 'Crashing now!' && kill -9 $$"
+}

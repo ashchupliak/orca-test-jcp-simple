@@ -1,0 +1,7 @@
+{
+  "name": "Status Test: Graceful Shutdown (for STOPPING test)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "runArgs": ["--name", "orca-test-graceful"],
+  "postCreateCommand": "echo 'Container created'",
+  "postStartCommand": "echo 'Running graceful shutdown test' && sleep infinity"
+}
